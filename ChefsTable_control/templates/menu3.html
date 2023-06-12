@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="menu-wrapper">
+    {% for cuisine in cuisines %}
+      <div class="cuisine-wrapper">
+        <h2>{{ cuisine.cusine }}</h2>
+        <div class="menu-items-wrapper">
+          {% for menu in cuisine.menu_set.all %}
+            <div class="menu-item">
+              <h3>{{ menu.name }}</h3>
+              <p>{{ menu.description }}</p>
+              <span class="price">£{{ menu.price }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

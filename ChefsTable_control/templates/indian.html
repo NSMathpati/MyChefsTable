@@ -1,0 +1,16 @@
+<div class="tabs-content">
+    {% for cuisine in cuisines %}
+        <section id="{{ cuisine.cusine|slugify }}" role="tabpanel" aria-labelledby="tab-{{ cuisine.cusine|slugify }}" class="tab-pane{% if forloop.first %} active{% endif %}">
+            {% for menu in menus %}
+                {% if menu.cuisineid == cuisine.cuisineid %}
+                    <p>{{ menu.cusineid }}</p>
+                    <div class="menu-item">
+                        <div class="menu-item-name">{{ menu.name }}</div>
+                        <div class="menu-item-description">{{ menu.description }}</div>
+                        <div class="menu-item-price">£{{ menu.price }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>

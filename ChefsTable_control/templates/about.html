@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section>
+  <article>
+    <h1>About Us</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <style>
+            p{
+                text-align: left;
+                color:grey;
+            }
+        </style>
+        
+        <p>
+            Based in London, United Kingdom ChefsTable is a family owned
+            restaurant, focused mainly on traditional Indian recipes served with a
+            modern twist. With our cuisines expanding from Indian to Itaian, mexican, chinese putting on an Indian twist to each of these cusines.
+        </p>
+        <p>
+          A 7 star experience costing you as less as food from a food truck. We believe in giving the best experince to all our customer
+          starting with our lounge, to the seating the view and the food. Food doesn't have to be fancy, it just has to be tasty enough so you can get
+          through your day.
+        </p>
+
+        <p>
+          The restaurant has several different looks with a rustic and relaxed atmosphere, to a classy modern 7 star hotel environment,
+          making it a popular place for a meal any time of the day. You can have a classic cafe environment or a club environment whatever you are
+          in the mood for.
+        </p>
+
+        <p>
+          ChefsTable is owned by Nitin who built this restaurant solely for the purpose 
+          of showing the world that food can be tasty and affordable by everyone.
+
+        </p>
+        <p>
+            ChefsTable is an all vegetarian, non alcoholic restaurant. This was built considering the fact
+            there are not many only vegetarian restaurants in the world. ChefsTable brings you the 7 star experience
+            to an all vegetarian based cusine.
+        </p>
+        <p>
+            <br>
+        </p>
+        <p>
+            <br>
+        </p>
+        <p style="text-align: right;"> 
+          Life is a combination of Food and Magic - Nitin
+        </p>
+
+    
+      </div>
+      <!--End col-->
+
+    
+
+      <!--Begin col-->
+      <div class="column">
+        <figure class="figure">
+          <img
+            src="{% static 'images/9.jpg' %}"
+            alt="Mario and Adrian" style="width: 100%"
+          />
+          <figcaption class="figure-caption" style="text-align: center;">
+            A peek at one of our dining areas.
+          </figcaption>
+        </figure>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+<style>
+  p{
+    margin: 0 20px 10px;
+  }
+  h1{
+    margin: 0 5px 0;
+  }
+  main article {
+    border: 7px solid #EDEFEE;
+  }
+</style>
+{% endblock %}

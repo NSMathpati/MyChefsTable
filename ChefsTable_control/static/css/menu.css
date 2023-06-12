@@ -1,0 +1,55 @@
+/* Set some basic styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set some styles for the menu wrapper */
+.menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2em;
+    padding: 2em;
+}
+
+/* Set some styles for the cuisine wrapper */
+.cuisine-wrapper {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1em;
+}
+
+/* Set some styles for the cuisine heading */
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* Set some styles for the menu items wrapper */
+.menu-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Set some styles for the menu item */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: calc(33.33% - 1em);
+}
+
+/* Set some styles for the menu item image */

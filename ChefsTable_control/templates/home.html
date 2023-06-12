@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<section>
+    <article id="hero">
+      
+      <h1 class="heading_shadow">SPECIAL OFFER</h1>
+      <p>
+        Don't have a seat reserved for you after booking ? The food is on the house.
+      </p>
+      <a href="{% url 'booking' %}" class="cta"> Book now </a>
+    </article>
+</section>
+<section class="highlight-rooms">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          
+          <h3 style="text-align: center; margin-bottom: 0px; color: #d0a043;">ChefsTable</h2>
+          <h2 style="font-size: 30px; margin-bottom: 0px; text-align: center; line-height: 1.2;"> Elegant, Classy, Luxurious and on top of all Affordable. </h2>
+          <p class="lead" style="text-align: center;">  A high class restaurant for all vegetarian's with a wide variety of cuisines to appetize yourself with. The look of a classy stylish restaurant at the price of a normal food truck. With prices starting as low as £5 and the costliest item being £100 we have it all. You name it and we'll have it.</p>
+  
+          <div style="text-align: center;">
+  
+           <a href="{% url 'about' %}" class="button"><span data-hover="KNOW MORE">KNOW MORE</span></a>
+           <style>
+            .highlight-rooms{ width: 100%; float: left; padding: 100px 0;}
+            .highlight-rooms h2{font-family: 'Playfair Display', serif; font-size: 60px; margin-bottom: 80px; margin-left: -5px; color: #192033;}
+            .highlight-rooms h5{font-family: 'Playfair Display', serif; color: #999; margin-top: 15%;}
+            .highlight-rooms h5:before{content: ""; width: 100px; height: 1px; float: left; background: #999; margin-top: 7px; margin-right: 7px;}
+            .highlight-rooms .button{ height: 45px; line-height: 45px; display: inline-block; border: 1px solid #d0a043; background-color: #d0a043; padding: 0 30px; color: #fff; font-family: 'Playfair Display', serif; box-shadow: 10px 10px 30px rgba(0,0,0,0.05); overflow: hidden;}
+            .highlight-rooms .button *{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
+            .highlight-rooms .button span { position: relative; display: inline-block;}
+            .highlight-rooms .button span:before {position: absolute;top: 100%; content: attr(data-hover); }
+            .highlight-rooms .button span:before {-webkit-transform: translate3d(0,0,0);-moz-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+            .highlight-rooms .button:hover span{-webkit-transform: translateY(-100%);-moz-transform: translateY(-100%);transform: translateY(-100%);}
+            .highlight-rooms .room-box{ width: 100%; float: left;}
+            .highlight-rooms .room-box img{ width: 100%; opacity: 0.5;}
+            .highlight-rooms .room-box .room-details{ width: 100%; height: 0; float: left; margin-top: -90px; overflow: hidden; position: relative; padding: 0; color: #fff;}
+            .highlight-rooms .room-box .room-details .room-name{font-family: 'Playfair Display', serif; color: #fff; font-size: 37px; margin-top: 0;}
+            .highlight-rooms .room-box .room-details .room-desc{ width: 100%; float: left; font-family: 'Playfair Display', serif; text-transform: uppercase; color: #fff; margin-bottom: 10px; opacity: 0.4;}
+            .highlight-rooms .room-box .room-details .room-price{ width: 100%; float: left; text-align: right; font-size: 40px;}
+            .highlight-rooms .room-box .room-details .room-price small{ font-size: 17px;}
+            .highlight-rooms .room-box .room-details .room-price span{ width: 100%; float: left; font-size: 10px; margin-top: -10px;}
+            .highlight-rooms .room-box .room-details .room-button{ height: 50px; line-height: 50px; display: inline-block; border: 1px solid #ccc; padding: 0 40px; color: #999; font-family: 'Playfair Display', serif; box-shadow: 10px 10px 30px rgba(0,0,0,0.05); overflow: hidden;}
+            .highlight-rooms .room-box .room-details .room-button *{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
+            .highlight-rooms .room-box .room-details .room-button span { position: relative; display: inline-block;}
+            .highlight-rooms .room-box .room-details .room-button span:before {position: absolute;top: 100%; content: attr(data-hover); }
+            .highlight-rooms .room-box .room-details .room-button span:before {-webkit-transform: translate3d(0,0,0);-moz-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+            .highlight-rooms .room-box .room-details .room-button:hover span{-webkit-transform: translateY(-100%);-moz-transform: translateY(-100%);transform: translateY(-100%); color: #fff;} 
+            .highlight-rooms .center { z-index: 2;} 
+            .highlight-rooms .center .room-box{width: 120%; margin-left: -10%; margin-top: -50px; box-shadow: 10px 10px 30px rgba(0,0,0,0.15);}
+            .highlight-rooms .center .room-box img{opacity: 1;}
+            .highlight-rooms .center .room-box .room-details{ height: auto; margin-top: -186px; background: #1c1b21; padding: 20px 25px;}
+            .highlight-rooms .owl-item{padding:30px 0; }
+            .highlight-rooms .owl-dots{ width: 100%; float: left; text-align: center;}
+            .highlight-rooms .owl-dots .owl-dot{ width: 16px; height: 3px; display: inline-block; background: #ccc; margin: 0 2px;}
+            .highlight-rooms .owl-dots .owl-dot.active{width: 36px; background: #000;}</style>
+  
+          </div>
+        </div>
+        <!-- end col-4 -->
+  <div class="col-md-8">
+    <div class="owl-carousel">
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/1.jpeg' %}" alt="Image">
+          
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <!-- end owl-item -->
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/2.jpeg' %}" alt="Image">
+          <p style="position: center; top: 300%; bottom: 100%; text-align: center; font-size: 1.75rem;">
+      
+            Reserve your table for the most amazing dining experience. Have a seating preference ? No problem just let us know what you'd like to experience and we will do our best to ensure you get the experience you've expected.
+          
+          <p>
+            <a href="{% url 'booking' %}" style="text-align: center;">Book your table now</a>
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <!-- end owl-item -->
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/4.jpeg' %}" alt="Image">
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/5.jpg' %}" alt="Image">
+          <p style="position: center; top: 300%; bottom: 100%; text-align: center; font-size: 1.75rem;">
+              Our premium lounge, everything in it is free of cost, Until you get a seat. So sit down and relax in a 5 star environment. 
+          <p>
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/7.jpg' %}" alt="Image">
+          
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <!--end owl-item -->
+      <div class="owl-item">
+        <figure class="room-box"> <img src="{% static 'images/10.jpg' %}" alt="Image">
+          <p>
+            Our menu consists cuisines from around the world. To name a few Italian, Mexican, Indian and many more!!!
+          </p>
+          <p>
+            <a href="{% url 'menu' %}">See our new menu</a>
+          </p>
+        </figure>
+        <!-- end room-box --> 
+      </div>
+      <!-- end owl-item -->
+    </div>
+   <!-- end owl-carousel --> 
+  </div>
+  <!-- end col-8 --> 
+</div>
+<!-- end row --> 
+</div>
+<!-- end container --> 
+</section>
+
+
+
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+
+
+<script src="{% static 'js/owl.carousel.min.js' %}"></script> 
+
+<script src="{% static 'js/jquery.fancybox.js' %}"></script> 
+
+<script src="{% static 'js/jquery.stellar.js' %}"></script> 
+
+<script src="{% static 'js/isotope.js' %}"></script> 
+
+<script src="{% static 'js/odometer.min.js' %}"></script> 
+
+<script src="{% static 'js/scripts.js' %}"></script> 
+
+</body>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load static %}
+
+<header>
+  <img src="{% static 'images/banner.png' %}" />
+</header>
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %} " style="font-size:x-large;">Home</a></li>
+    <li><a href="{% url 'about' %}" style="font-size:x-large;">About</a></li>
+    <li><a href="{% url 'menu' %}" style="font-size:x-large;">Menu</a></li>
+    <li><a href="{% url 'booking' %}" style="font-size:x-large;">Book</a></li>
+  </ul>
+</nav>

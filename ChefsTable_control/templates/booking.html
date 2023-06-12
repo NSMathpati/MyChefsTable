@@ -1,0 +1,46 @@
+
+{% load static %}
+<head>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+	
+	{% include 'partials/header.html' %}
+{% block content %}
+<section>
+	
+	<article>
+	  <h1>Make a reservation</h1>
+	  <!--Begin row-->
+	  <div class="row">
+		<!--Begin col-->
+		<div class="column">
+		  <form action="" method="post">
+			{% csrf_token %}
+			<style>
+				p{
+					text-align: left;
+				}
+			</style>
+			{{form.as_p}}
+			<input type="submit" id="button">
+		  </form>
+		</div>
+		<!--End col-->
+  
+		<!--Begin col-->
+		<figure class="room-box"> <img src="{% static 'images/1.jpeg' %}" alt="Image" width="100%">
+          
+        </figure>
+		<!--End col-->
+	  </div>
+	  <!--End row-->
+  
+  
+  
+  
+	</article>
+  </section>
+</body>
+  {% include 'partials/footer.html' %}s
+{% endblock %}

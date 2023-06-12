@@ -1,0 +1,99 @@
+<head>
+    <link rel="stylesheet" href="//assets-cdn-refresh.getbento.com/stylesheet/highstdeli/1/scss/main.7ef889070d08c23869316b42bc890d92.scss">
+    <style>
+        /* Style for menu items */
+        .menu-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .menu-item-description {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .menu-item-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .vertical-tabs {
+            display: flex;
+            flex-direction: column;
+            }
+    </style>
+</head>
+
+<section id="menus" aria-label="menus-section" class="content revealable">
+    <div class="tabs">
+        <ul class="tabs-nav" role="tablist">
+            {% for cuisine in cuisines %}
+                <li role="presentation">
+                    <a id="tab-{{ cuisine.cusine|slugify }}"
+                        class="btn btn-tabs{% if forloop.first %} active{% endif %}"
+                        href="#{{ cuisine.cusine|slugify }}"
+                        role="tab"
+                        aria-controls="{{ cuisine.cusine|slugify }}"
+                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                        data-order="{{ forloop.counter }}"
+                        tabindex="{% if forloop.first %}0{% endif %}">
+                        {{ cuisine.cusine }}
+                        
+                    </a>
+                {% endfor %}
+            </ul>
+                </li>
+                <div class="tabs-content">
+                    {% for cuisine in cuisines %}
+                        <section id="{{ cuisine.cusine|slugify }}" role="tabpanel" aria-labelledby="tab-{{ cuisine.cusine|slugify }}" class="tab-pane{% if forloop.first %} active{% endif %}">
+                            {% for menu in menus %}
+                                {% if menu.cuisineid == cuisine.cuisineid %}
+                                    <p>{{ menu.cusineid }}</p>
+                                    <div class="menu-item">
+                                        <div class="menu-item-name">{{ menu.name }}</div>
+                                        <div class="menu-item-description">{{ menu.description }}</div>
+                                        <div class="menu-item-price">£{{ menu.price }}</div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </section>
+                    {% endfor %}
+                </div>
+        
+    </div>
+    <script>
+        var tabs = document.querySelectorAll('.tabs-nav a');
+
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var tab = event.target;
+                var activeTab = document.querySelector('.tabs-nav a.active');
+                var activeSection = document.querySelector('.tabs-content section.active');
+
+                if (tab === activeTab) {
+                    return;
+                }
+
+                activeTab.classList.remove('active');
+                tab.classList.add('active');
+
+                activeSection.classList.remove('active');
+                var sectionId = tab.getAttribute('href').slice(1);
+                var section = document.getElementById(sectionId);
+                section.classList.add('active');
+            });
+        }
+    </script>
+</section>
