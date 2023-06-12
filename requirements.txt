@@ -12,7 +12,6 @@ djangorestframework
 djangorestframework-simplejwt
 djoser
 idna
-mysqlclient
 oauthlib
 psycopg2
 pycparser
