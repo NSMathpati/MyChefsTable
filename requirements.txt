@@ -26,3 +26,4 @@ sqlparse
 typing_extensions
 tzdata
 urllib3
+whitenose
